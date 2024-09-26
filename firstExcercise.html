@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script>
+            let submit = () => {
+                inputedValue = document.getElementById("inputValue").value;
+                if(Number(inputedValue)+1 > 15){
+                    alert("Your baggage is greater than 15");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id = "inputValue">
+        <button onclick = "submit">Press Me!</button>
+    </body>
+</html>
