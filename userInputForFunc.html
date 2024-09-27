@@ -1,7 +1,10 @@
 <html>
     <head>
         <script>
-            sum =0;
+            sum = 0;
+            let a = document.getElementByI(num1).value;
+            let b = document.getElementById(num2).value;
+            let n = document.getElementById(limit).value;
             let sumFunc = (a,b,n) => {
                 for(i=1;i<n;i++){
                     if(i%a ==0 || i%b ==0){
@@ -16,7 +19,7 @@
         <input type ="text" id ="num1"> Enter the value of a <br>
         <input type ="text" id = "num2"> Enter the value of b <br>
         <input type = "text" id="limit"> Enter the limit <br>
-        <button onclick="sumFunc()">SUM</button>
+        <button onclick="sumFunc(num1,num2,limit)">SUM</button>
 
     </body>
 </html>
