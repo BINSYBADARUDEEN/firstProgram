@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            sum =0;
+            let sumFunc = (a,b,n) => {
+                for(i=1;i<n;i++){
+                    if(i%a ==0 || i%b ==0){
+                        sum = sum+i;
+                    }
+                }
+                alert(sum);
+            }
+        </script>
+    </head>
+    <body>
+        <input type ="text" id ="num1"> Enter the value of a <br>
+        <input type ="text" id = "num2"> Enter the value of b <br>
+        <input type = "text" id="limit"> Enter the limit <br>
+        <button onclick="sumFunc()">SUM</button>
+
+    </body>
+</html>
