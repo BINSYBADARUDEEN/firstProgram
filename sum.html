@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            sum =0;
+
+            let sumFunc = (a,b,n) => {
+                for(i=1;i<n;i++){
+                    if(i%a ==0 || i%b ==0){
+                        sum = sum+i;
+                    }
+                }
+                alert(sum);
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="sumFunc(3,5,1000)">Sum</button>
+    </body>
+</html>
