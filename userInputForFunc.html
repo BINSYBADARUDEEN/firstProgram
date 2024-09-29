@@ -2,11 +2,10 @@
     <head>
         <script>
             sum = 0;
-           // a = document.getElementById("num1").value;
-            a = document.getElementById("num1").value;
-            b = document.getElementById("num2").value;
-            n = document.getElementById("limit").value;
-            let sumFunc = (a,b,n) => {
+             let sumFunc = () => {
+                a = document.getElementById("inputValue").value;
+                b = document.getElementById("num2").value;
+                n = document.getElementById("limit").value;
                 for(i=1;i<n;i++){
                     if(i%a ==0 || i%b ==0){
                         sum = sum+i;
