@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+            sum = 0;
+             let sumFunc = () => {
+                let a = document.getElementById("num1").value;
+                let b = document.getElementById("num2").value;
+                let n = document.getElementById("limit").value;
+                a = parseInt(a);
+                b = parseInt(b);
+                n = parseInt(n);
+                for(i=1;i<n;i++){
+                    if(i%a ==0 || i%b ==0){
+                        sum = sum+i;
+                    }
+                }
+                document.getElementById("result").innerHTML = 'Sum is ${sum}';
+                document.getElementById("num1").style.display = "none";
+                document.getElementById("num2").style.display = "none";
+                document.getElementById("limit").style.display = "none";
+                document.getElementById("sumButton").style.display = "none";
+           
+            }
+        </script>
+    </head>
+    <body>
+        <input type ="text" id ="num1"> Enter the value of a <br>
+        <input type ="text" id = "num2"> Enter the value of b <br>
+        <input type = "text" id="limit"> Enter the limit <br>
+        <button id = "sumButton" onclick="sumFunc(num1,num2,limit)">SUM</button>
+        <div id="result"></div>
+    </body>
+</html>
