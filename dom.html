@@ -1,7 +1,7 @@
 <html>
     <head>
         <script>
-            sum = 0;
+             let sum = 0;
              let sumFunc = () => {
                 let a = document.getElementById("num1").value;
                 let b = document.getElementById("num2").value;
@@ -14,7 +14,10 @@
                         sum = sum+i;
                     }
                 }
-                document.getElementById("result").innerHTML = 'Sum is ${sum}';
+                document.getElementById("result").innerHTML = `The sum is: ${sum}`;
+                document.getElementById("label1").style.display = "none";
+                document.getElementById("label2").style.display = "none";
+                document.getElementById("label3").style.display = "none";
                 document.getElementById("num1").style.display = "none";
                 document.getElementById("num2").style.display = "none";
                 document.getElementById("limit").style.display = "none";
@@ -24,9 +27,12 @@
         </script>
     </head>
     <body>
-        <input type ="text" id ="num1"> Enter the value of a <br>
-        <input type ="text" id = "num2"> Enter the value of b <br>
-        <input type = "text" id="limit"> Enter the limit <br>
+        <label id="label1">Enter the value of a</label>
+        <input type ="text" id ="num1"> <br>
+        <label id="label2">Enter the value of b</label> 
+        <input type ="text" id = "num2"> <br>
+        <label id="label3">Enter the limit</label> 
+        <input type = "text" id="limit"> 
         <button id = "sumButton" onclick="sumFunc(num1,num2,limit)">SUM</button>
         <div id="result"></div>
     </body>
