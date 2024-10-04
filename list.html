@@ -5,7 +5,7 @@
                 let b = 5;
                 const l = [1,2,3,4,5,6,7,8,9,10]
                 let findSum = (a,b,l) => {
-                    l.reduce((sum,num) => {
+                    return l.reduce((sum,num) => {
                         if(num%a == 0 ||  num%b ==0 ){
                              return sum+num;
                         }return sum;
