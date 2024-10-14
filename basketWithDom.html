@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            let f1 = (basket,prices)=>{
+                let totalCost = 0;
+                for(let item in basket){
+                    if(prices[item] != undefined){
+                        totalCost += basket[item] * prices[item];
+                    }
+                }
+                return totalCost;
+                alert(totalCost);
+            }
+        </script>
+    </head>
+    <body>
+        <label> Select Products</label> <br>
+        <label>Apple</label> 
+        <label> Weight</label>
+        <select>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <label>Orange</label> 
+        <label> Weight</label>
+        <select>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <button id = "list" onclick="f1(basket,price)">Total</button>
+    </body>
+</html>
