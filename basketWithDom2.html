@@ -8,14 +8,14 @@
                     
                     };
                     let price ={
-                        [document.getElementById('product1').value] : Number(document.getElementById('applePrice')),
+                        [document.getElementById('product1').value] : Number(document.getElementById('applePrice').value),
                         [document.getElementById('product2').value] : Number(document.getElementById('orangePrice').value)
                     };
                     let total = 0;
                     for(product in basket){
                         total += basket[product] * price[product];
                     }
-                    alert(total);
+                    alert(Number(total));
                 }
             </script>
 
