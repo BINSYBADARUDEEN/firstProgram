@@ -3,7 +3,7 @@
         <title>
             Basket with Dom
             <script>
-                let calculateTotal =()=>{
+                let calculate = () => {
                     let basket = {
                         [document.getElementById('product1').value]: Number(document.getElementById('quantity1').value),
                         [document.getElementById('product2').value] : Number(document.getElementById('quantity2').value)
@@ -44,6 +44,6 @@
         <label>
             Orange Price : <input type="number" id="orangePrice" value="1.0">
         </label><br>
-        <button onclick="calculateTotal()">Calculate Total</button>
+        <button onclick="calculate()">Calculate Total</button>
     </body>
 </html>
