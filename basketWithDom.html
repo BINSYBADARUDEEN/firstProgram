@@ -1,36 +1,47 @@
 <html>
     <head>
-        <script>
-            let f1 = (basket,prices)=>{
-                let totalCost = 0;
-                for(let item in basket){
-                    if(prices[item] != undefined){
-                        totalCost += basket[item] * prices[item];
+            <script>
+                let calculate = () => {
+                    let basket = {
+                        [document.getElementById('product1').value]: Number(document.getElementById('quantity1').value),
+                        [document.getElementById('product2').value] : Number(document.getElementById('quantity2').value)
+                    
+                    };
+                    let price ={
+                        [document.getElementById('product1').value] : Number(document.getElementById('applePrice').value),
+                        [document.getElementById('product2').value] : Number(document.getElementById('orangePrice').value)
+                    };
+                    let total = 0;
+                    for(product in basket){
+                        total += basket[product] * price[product];
                     }
+                    alert(Number(total));
                 }
-                return totalCost;
-                alert(totalCost);
-            }
-        </script>
+            </script>
+
     </head>
     <body>
-        <label> Select Products</label> <br>
-        <label>Apple</label> 
-        <label> Weight</label>
-        <select>
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select>
-        <label>Orange</label> 
-        <label> Weight</label>
-        <select>
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select>
-        <button id = "list" onclick="f1(basket,price)">Total</button>
+        <h1>Shopping Basket</h1>
+        <h2> Basket </h2>
+        <label> 
+            APPLE : <input type = "text" id ="product1" value="apple" readonly>
+        </label> 
+        <label>
+            Quantity : <input type = "number" id = "quantity1" value="3">
+        </label> <br>
+        <label>
+            ORANGE : <input type = "text" id ="product2" value = "orange" readonly>
+        </label>
+        <label>
+            Quantity : <input type = "number" id="quantity2" value ="2">
+        </label> <br>
+        <h2> Prices </h2>
+        <label>
+            Apple Price : <input type="number" id ="applePrice" value="1.5" readonly>
+        </label> <br>
+        <label>
+            Orange Price : <input type="number" id="orangePrice" value="1.0" readonly>
+        </label><br>
+        <button onclick="calculate()">Calculate Total</button>
     </body>
 </html>
