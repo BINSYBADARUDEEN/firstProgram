@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Custom Tag with appendChild</title>
+</head>
+<body>
+
+    <!-- Custom tag already in the body -->
+    <my-message></my-message>
+
+    <!-- Another container where we will move the custom tag -->
+    <div id="newContainer" style="margin-top: 20px; border: 1px solid #000; padding: 10px;">
+        <p>New Container: </p>
+    </div>
+
+    <!-- Button to trigger the move -->
+    <button id="moveButton">Move Custom Tag</button>
+
+    <script>
+        // Define the custom element class
+        class MyMessage extends HTMLElement {
+            constructor() {
+                super();
+                // Add content inside the custom element
+                this.innerHTML = "<p>Hello, this is a custom message tag!</p>";
+            }
+        }
+
+        // Register the custom element
+        customElements.define('my-message', MyMessage);
+
+        // Adding event listener to move the custom tag on button click
+        document.getElementById('moveButton').addEventListener('click', function() {
+            // Select the existing custom tag
+            const customTag = document.querySelector('my-message');
+
+            // Select the new container where the tag will be moved
+            const newContainer = document.getElementById('newContainer');
+
+            // Move the custom tag to the new container
+            newContainer.appendChild(customTag);
+        });
+    </script>
+
+</body>
+</html>
