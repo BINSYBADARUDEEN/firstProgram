@@ -5,8 +5,18 @@
                 constructor(){
                     super();
                     this.innerHTML = "<p>this is my custom tag</p>";
+                    const wrapper = document.createElement('span');
+                    wrapper.setAttribute('class','wrapper');
+
+                    const icon = document.createElement('span');
+                    icon.setAttribute('class','icon');
+                    icon.setAttribute('tabIndex',0);
+                    
+                    wrapper.appendChild(icon);
+                   
                 }
             }
+
             customElements.define('my-tag',MyTag);
         </script>
     </head>
