@@ -1,12 +1,16 @@
 <html>
     <head>
         <script>
-            class Simple extends HTMLElement{
-                
+            class MyTag extends HTMLElement{
+                constructor(){
+                    super();
+                    this.innerHTML = "<p>this is my custom tag</p>";
+                }
             }
+            customElements.define('my-tag',MyTag);
         </script>
     </head>
     <body>
-        <div id="container"></div>
+        <my-tag> </my-tag>
     </body>
 </html>
